@@ -21,15 +21,15 @@ export default ({
     checkLogin (accounts) {
       for (var i = 0; accounts.lenght(i); i++) {
         if (accounts[i] === this.userMail) {
-          console.log("gibt es")
+          console.log('gibt es')
         }
       }
     }
   }
 })
 
-var accounts = {
-  'test.email@test.com': '1234'
-}
-checkLogin (accounts)
+// var accounts = {
+//   'test.email@test.com': '1234'
+// }
+
 </script>
