@@ -16,6 +16,20 @@ export default ({
       userMail: '',
       userPassword: ''
     }
+  },
+  methods: {
+    checkLogin (accounts) {
+      for (var i = 0; accounts.lenght(i); i++) {
+        if (accounts[i] === this.userMail) {
+          console.log("gibt es")
+        }
+      }
+    }
   }
 })
+
+var accounts = {
+  'test.email@test.com': '1234'
+}
+checkLogin (accounts)
 </script>
