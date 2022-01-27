@@ -18,10 +18,14 @@ export default ({
     }
   },
   methods: {
-    checkLogin (accounts) {
-      for (var i = 0; accounts.lenght(i); i++) {
-        if (accounts[i] === this.userMail) {
-          console.log('gibt es')
+    userCheck (email, password, users) {
+      for (var data in users) {
+        if (data === email) {
+          if (users[data] === password) {
+            console.log('ok')
+          } else {
+            console.log('password stimmt nicht')
+          }
         }
       }
     }
