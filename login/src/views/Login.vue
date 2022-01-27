@@ -1,7 +1,10 @@
 <template>
   <div id="loginCont">
-      <input v-model="userMail" placeholder="Enter your email" />
-      <input v-model="userPassword" placeholder="Enter your password" />
+    <form @submit.prevent="submit">
+      <input type="email" v-model="userMail" placeholder="Enter your email" />
+      <input type="password" v-model="userPassword" placeholder="Enter your password" />
+      <button type="submit">Login</button>
+    </form>
       <h3>
           Your Name is: {{userMail}}<br/>
           your password is: {{userPassword}}
@@ -9,12 +12,15 @@
     </div>
 </template>
 <script>
+// import * as firebase from 'firebase/app'
+// import 'firebase/auth'
 
 export default ({
   data () {
     return {
       userMail: '',
-      userPassword: ''
+      userPassword: '',
+      error: false
     }
   },
   methods: {
@@ -28,12 +34,11 @@ export default ({
           }
         }
       }
+    },
+    submit () {
+
     }
   }
 })
-
-// var accounts = {
-//   'test.email@test.com': '1234'
-// }
 
 </script>
