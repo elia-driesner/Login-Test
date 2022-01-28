@@ -5,6 +5,8 @@ import router from './router'
 // import { initializeApp } from 'firebase/app'
 // import { getAnalytics } from 'firebase/analytics'
 
+// import firebase from 'firebase/app'
+
 const app = createApp(App)
 app.use(router)
 app.mount('#app')
@@ -26,7 +28,3 @@ app.mount('#app')
 //   measurementId: 'G-EV1JYPTXPX'
 
 // }
-
-// const fireApp = initializeApp(firebaseConfig)
-
-// const analytics = getAnalytics(app)

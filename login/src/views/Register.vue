@@ -8,8 +8,8 @@
     </div>
 </template>
 <script>
-import firebase from 'firebase/app'
-require('firebase/auth')
+import * as firebase from 'firebase/app'
+import 'firebase/auth'
 
 export default ({
   data () {
@@ -21,8 +21,12 @@ export default ({
   },
   methods: {
     submit () {
-      const user = firebase.auth().createUserWithEmailAndPassword(this.userMail, this.userPassword)
-      console.log(user)
+      try {
+        const user = firebase.auth().createUserWithEmailAndPassword(this.userMail, this.userPassword)
+        console.log(user)
+      } catch (error) {
+        console.log(error)
+      }
     }
   }
 })
